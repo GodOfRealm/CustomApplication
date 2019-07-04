@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="280dp"
+        android:layout_height="200dp"
+        android:background="@drawable/shape_white_bg">
+
+        <TextView
+            android:id="@+id/uikit_common_alert_dialog_tv_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:text="@string/common_alert_dialog_tip"
+            android:textColor="#2e2e2e"
+            android:textSize="@dimen/text_font_size_middle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/uikit_common_alert_dialog_iv_close"
+            android:layout_width="@dimen/bdp_18"
+            android:layout_height="@dimen/bdp_18"
+            android:layout_marginRight="@dimen/bdp_20"
+            android:src="@mipmap/pic_delete_selector"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/uikit_common_alert_dialog_tv_tip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/uikit_common_alert_dialog_tv_tip"
+            tools:visibility="visible" />
+
+        <View
+            android:id="@+id/uikit_common_alert_dialog_v_top_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#ececec"
+            app:layout_constraintTop_toBottomOf="@+id/uikit_common_alert_dialog_tv_tip" />
+
+        <TextView
+            android:id="@+id/uikit_common_alert_dialog_tv_message"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bdp_100"
+            android:layout_marginLeft="@dimen/bdp_10"
+            android:layout_marginRight="@dimen/bdp_10"
+            android:gravity="center"
+            android:textColor="#2e2e2e"
+            android:textSize="@dimen/text_font_size_normal"
+            app:layout_constraintTop_toBottomOf="@id/uikit_common_alert_dialog_v_top_line" />
+
+
+        <com.miguan.pick.core.widget.radius.RadiusTextView
+            android:id="@+id/uikit_common_alert_dialog_tv_left"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/bdp_36"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="@dimen/bdp_15"
+            android:gravity="center"
+            android:text="@string/common_alert_dialog_cancel"
+            android:textColor="#2e2e2e"
+            android:textSize="@dimen/text_font_size_normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/uikit_common_alert_dialog_tv_right"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:rv_radius="@dimen/bdp_50"
+            app:rv_strokeColor="#cdcdcd"
+            app:rv_strokeWidth="2px" />
+
+        <com.miguan.pick.core.widget.radius.RadiusTextView
+            android:id="@+id/uikit_common_alert_dialog_tv_right"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/bdp_36"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="@dimen/bdp_15"
+            app:rv_backgroundColor="#2e2e2e"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="@string/common_alert_dialog_ok"
+            android:textSize="@dimen/text_font_size_normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/uikit_common_alert_dialog_tv_left"
+            app:rv_radius="@dimen/bdp_50"
+            app:rv_strokeColor="#cdcdcd"
+            app:rv_strokeWidth="2px" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>

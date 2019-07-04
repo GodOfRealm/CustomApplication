@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/constraint_tv_test1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1" />
+
+    <TextView
+        android:id="@+id/constraint_tv_test2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2"
+        app:layout_constraintTop_toBottomOf="@+id/constraint_tv_test1" />
+
+    <TextView
+        android:id="@+id/constraint_tv_test3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3"
+        app:layout_constraintTop_toBottomOf="@+id/constraint_tv_test2" />
+
+    <TextView
+        android:id="@+id/constraint_tv_test4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4"
+        app:layout_constraintTop_toBottomOf="@+id/constraint_tv_test3" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="按钮1"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <android.support.constraint.Group
+        android:id="@+id/constraint_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="constraint_tv_test1,constraint_tv_test2,constraint_tv_test3" />
+
+
+</android.support.constraint.ConstraintLayout>

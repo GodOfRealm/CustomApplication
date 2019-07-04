@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="EmptyText">
+        <item name="android:drawablePadding">16dp</item>
+        <!--<item name="android:drawableTop">?attr/iconEmpty</item>-->
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <!--<item name="android:text">?attr/textEmpty</item>-->
+        <item name="android:textColor">?attr/android:textColorSecondary</item>
+    </style>
+    <!-- Dialog动画 -->
+    <style name="DialogAnimation" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_scale_in</item>
+        <item name="android:windowExitAnimation">@anim/push_scale_out</item>
+    </style>
+    <!-- 通用Dialog -->
+    <style name="CommonDialogTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景颜色及透明程度-->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowFrame">@null</item><!-- 边框 -->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:backgroundDimEnabled">true</item><!--是否模糊-->
+        <item name="android:backgroundDimAmount">0.7</item><!-- 黑色遮罩透明度 -->
+        <item name="android:windowAnimationStyle">@style/DialogAnimation</item>
+    </style>
+</resources>
