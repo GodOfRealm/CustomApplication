@@ -151,7 +151,7 @@ public class CommonDialog extends DialogFragment {
         }
 
         public Builder setCancelableOutside(boolean cancelableOutside) {
-            cancelableOutside = cancelableOutside;
+            mCancelableOutside = cancelableOutside;
             return this;
         }
 

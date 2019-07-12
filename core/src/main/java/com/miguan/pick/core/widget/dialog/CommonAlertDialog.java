@@ -21,6 +21,7 @@ public class CommonAlertDialog {
     public static void newInstance(final Builder builder, FragmentManager fragmentManager) {
         new CommonDialog.Builder()
                 .setLayoutRes(R.layout.common_alert_dialog)
+                .setCancelableOutside(builder.isCancelableOutside())
                 .addOnClickListener(R.id.uikit_common_alert_dialog_tv_left, R.id.uikit_common_alert_dialog_tv_right,
                         R.id.uikit_common_alert_dialog_iv_close)
                 .setOnViewClickListener(new OnCommonDialogViewClickListener() {
@@ -96,6 +97,7 @@ public class CommonAlertDialog {
         private boolean mHasTip;
         private boolean mShowClose;
         private CommonAlertListener mCommonAlertListener;
+        private boolean mCancelableOutside;
 
         public String getTitleString() {
             return mTitleString;
@@ -127,6 +129,15 @@ public class CommonAlertDialog {
 
         public CommonAlertListener getCommonAlertListener() {
             return mCommonAlertListener;
+        }
+
+        public Builder setCancelableOutside(boolean cancelableOutside) {
+            mCancelableOutside = cancelableOutside;
+            return this;
+        }
+
+        public boolean isCancelableOutside() {
+            return mCancelableOutside;
         }
 
         public Builder setRightString(String rightString) {
