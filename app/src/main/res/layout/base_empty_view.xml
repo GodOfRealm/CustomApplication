@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:id="@+id/img_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:contentDescription="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@mipmap/list_empty_ic_fans"
+        />
+
+    <TextView
+        android:id="@+id/tv_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:textColor="@color/colorTextSecondary"
+        android:textSize="@dimen/bdp_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_empty"
+        tools:text="description"
+        />
+
+    <com.miguan.pick.core.widget.radius.RadiusTextView
+        android:id="@+id/btn_retry"
+        android:layout_width="80dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="22dp"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="刷新"
+        android:textColor="@color/colorTextTertiary"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_des"
+        app:rv_backgroundColor="@color/white"
+        app:rv_radius="7dp"
+        app:rv_strokeColor="@color/colorTextTertiary"
+        app:rv_strokeWidth="0.5dp"
+        />
+
+</android.support.constraint.ConstraintLayout>

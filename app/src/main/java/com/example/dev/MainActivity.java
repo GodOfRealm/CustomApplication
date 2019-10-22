@@ -3,6 +3,10 @@ package com.example.dev;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.example.dev.myapplication.R;
@@ -15,6 +19,9 @@ import com.yanzhenjie.recyclerview.SwipeRecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static android.view.ViewGroup.*;
+import static android.view.ViewGroup.LayoutParams.*;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,11 +39,18 @@ public class MainActivity extends AppCompatActivity {
         mRcvList = (SwipeRecyclerView) findViewById(R.id.main_rcv_list);
         mRcvList.setLayoutManager(new LinearLayoutManager(this));
         mAdapter = new TestAdapter();
+        mAdapter.setHeaderAndEmpty(true);
         List<String> list = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
-            list.add(i + "fuck");
-        }
+//        for (int i = 0; i < 5; i++) {
+//            list.add(i + "fuck");
+//        }
         mAdapter.setNewData(list);
+        mAdapter.setHeaderView(View.inflate(MainActivity.this, R.layout.head, null));
+        View inflate = LayoutInflater.from(MainActivity.this).inflate(R.layout.empty,null );
+        FrameLayout.LayoutParams te = new FrameLayout.LayoutParams(MATCH_PARENT,MATCH_PARENT);
+        inflate.setLayoutParams(te);
+        mAdapter.setEmptyView(inflate);
+
 
         mRcvList.setSwipeMenuCreator(new SwipeMenuCreator() {
             @Override
