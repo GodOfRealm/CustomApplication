@@ -29,6 +29,10 @@
         <attr name="content_text_color" format="color" />
         <attr name="content_text_max_lines" format="integer" />
         <attr name="content_text_line_space" format="dimension" />
+        <attr name="icon_width" format="dimension" />
+        <attr name="icon_height" format="dimension" />
+        <attr name="icon_padding" format="dimension" />
+        <attr name="content_text_bold" format="boolean" />
     </declare-styleable>
 
 </resources>

@@ -11,12 +11,10 @@ import com.example.dev.myapplication.R
 import kotlinx.android.synthetic.main.meet_view_end_with_icon.view.*
 import android.view.ViewTreeObserver.OnGlobalLayoutListener
 import android.widget.TextView
-import com.example.dev.myapplication.R.mipmap.ic_launcher
-import android.graphics.drawable.Drawable
 import android.text.Layout
 import android.text.StaticLayout
 import android.text.TextPaint
-import android.view.Gravity
+import android.util.TypedValue
 import android.view.ViewGroup
 import android.widget.FrameLayout
 import com.blankj.utilcode.util.SizeUtils
@@ -52,7 +50,7 @@ class EndWithIconView @JvmOverloads constructor(context: Context, attrs: Attribu
     }
 
     private fun initView() {
-        meet_tv_end_with_icon_message.textSize = itemTextSize
+        meet_tv_end_with_icon_message.setTextSize(TypedValue.COMPLEX_UNIT_PX, itemTextSize)
     }
 
     private fun setDataWithIcon(text: String?, icon: String) {
@@ -75,24 +73,27 @@ class EndWithIconView @JvmOverloads constructor(context: Context, attrs: Attribu
                         val lineContent = text!!.substring(start, end) //指定行的内容
                         start = end
                         val itemView = getItemView(i)
-                        itemView.setText(lineContent)
+                        itemView.text = lineContent
 
-                        if (count == 1 && getLineMaxNumber(text, meet_tv_end_with_icon_message.paint, meet_tv_end_with_icon_message.maxWidth) == text.length) {
-                            itemView.setText(lineContent.substring(0, lineContent.length - 2))
-                            val textView = getItemView(2)
-                            textView.setText(lineContent.substring(lineContent.length - 1))
-                            drawEndWithIcon(textView)
-                            meet_tv_end_with_icon_content.addView(itemView)
-                            meet_tv_end_with_icon_content.addView(textView)
-                            addFlag = true
-                        }
-                        if (!addFlag) {
-                            meet_tv_end_with_icon_content.addView(itemView)
-                            if (i == itemMaxLines - 1 || i == meet_tv_end_with_icon_message.getLineCount() - 1) {
-                                drawEndWithIcon(itemView)
-                                break
+                            if (count == 1 && getLineMaxNumber(text, itemView.paint, width) >= text.length) {
+                                itemView.text = lineContent.substring(0, lineContent.length - 2)
+                                val textView = getItemView(2)
+                                textView.text = lineContent.substring(lineContent.length - 1)
+                                drawEndWithIcon(textView)
+                                meet_tv_end_with_icon_content.addView(itemView)
+                                meet_tv_end_with_icon_content.addView(textView)
+                                addFlag = true
                             }
-                        }
+                            if (!addFlag) {
+                                if (i <= itemMaxLines - 1) {
+                                    meet_tv_end_with_icon_content.addView(itemView)
+                                    if (i == itemMaxLines - 1 || i == meet_tv_end_with_icon_message.getLineCount() - 1) {
+                                        drawEndWithIcon(itemView)
+                                    }
+                                }
+
+                            }
+
 
                     }
 
@@ -120,7 +121,7 @@ class EndWithIconView @JvmOverloads constructor(context: Context, attrs: Attribu
             setTextColor(itemTextColor)
             setSingleLine(true)
             ellipsize = TextUtils.TruncateAt.END
-            setTextSize(itemTextSize)
+            setTextSize(TypedValue.COMPLEX_UNIT_PX, itemTextSize)
             val itemParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
             if (postion != 0) {
                 itemParams.topMargin = lineSpace.toInt()
@@ -144,10 +145,10 @@ class EndWithIconView @JvmOverloads constructor(context: Context, attrs: Attribu
      * @param maxWidth textview.getMaxWidth()/或者是指定的数值,如200dp
      */
     fun getLineMaxNumber(text: String, paint: TextPaint, maxWidth: Int): Int {
-        if (TextUtils.isEmpty(text)) {
+        if (null == text || "" == text) {
             return 0
         }
-        var staticLayout = StaticLayout(text, paint, maxWidth, Layout.Alignment.ALIGN_NORMAL, 1.0f, 0f, false)
+        val staticLayout = StaticLayout(text, paint, maxWidth, Layout.Alignment.ALIGN_NORMAL, 1.0f, 0f, false)
         return staticLayout.getLineEnd(0)
     }
 
