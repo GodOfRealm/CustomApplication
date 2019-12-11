@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/bdp_60"
+    android:background="@color/white">
+
+    <com.example.dev.widget.radius.RadiusImageView
+        android:id="@+id/meet_iv_quick_create_switch_icon"
+        android:layout_width="@dimen/bdp_30"
+        android:layout_height="@dimen/bdp_30"
+        android:layout_marginStart="@dimen/bdp_17"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rv_oval="true"
+        tools:src="#ffa800" />
+
+    <TextView
+        android:id="@+id/meet_iv_quick_create_switch_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/bdp_5"
+        android:textColor="#2e2e2e"
+        android:textSize="@dimen/bdp_13"
+        app:layout_constraintBottom_toBottomOf="@id/meet_iv_quick_create_switch_icon"
+        app:layout_constraintStart_toEndOf="@id/meet_iv_quick_create_switch_icon"
+        app:layout_constraintTop_toTopOf="@id/meet_iv_quick_create_switch_icon"
+        tools:text="喵喵小格子" />
+</android.support.constraint.ConstraintLayout>
