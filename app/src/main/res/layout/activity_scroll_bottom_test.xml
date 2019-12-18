@@ -2,13 +2,14 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <ImageView
+    <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
         android:id="@+id/scroll_iv_preview"
         android:layout_width="match_parent"
         android:layout_height="375dp"
-        android:background="#ffa800"
+        tools:background="#ffa800"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout

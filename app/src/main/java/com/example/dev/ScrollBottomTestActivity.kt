@@ -1,6 +1,8 @@
 package com.example.dev
 
+import android.graphics.PointF
 import android.graphics.Rect
+import android.os.Build
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.View
@@ -11,6 +13,11 @@ import com.example.dev.myapplication.R
 import kotlinx.android.synthetic.main.activity_scroll_bottom_test.*
 import android.support.design.widget.AppBarLayout
 import android.support.design.widget.CoordinatorLayout
+import android.view.ViewOutlineProvider
+import com.bumptech.glide.Glide
+import com.davemorrissey.labs.subscaleview.ImageSource
+import com.davemorrissey.labs.subscaleview.ImageViewState
+import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
 
 
 /**
@@ -24,7 +31,11 @@ class ScrollBottomTestActivity : BaseActivity() {
     var mAdapter = ScrollBottomTestAdapter()
     override fun initView() {
         setContentView(R.layout.activity_scroll_bottom_test)
-
+        //AppBarLayout阴影
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            uikit_abl_base_coordinator_appbarLayout.outlineProvider = null
+            uikit_ctl_base_coordinator_toolbarLayout.outlineProvider = ViewOutlineProvider.BOUNDS
+        }
     }
 
     override fun initData() {
@@ -45,7 +56,15 @@ class ScrollBottomTestActivity : BaseActivity() {
             dataList.add(index.toString())
 
         }
+
+        scroll_iv_preview.setMinimumScaleType(SubsamplingScaleImageView.SCALE_TYPE_CUSTOM)
+
+        scroll_iv_preview.setMinScale(0.1F);//最小显示比例
+
+        scroll_iv_preview.setMaxScale(10.0F);//最大显示比例（太大了图片显示会失真，因为一般微博长图的宽度不会太宽）
         mAdapter.setNewData(dataList)
+        scroll_iv_preview.setImage(ImageSource.resource(R.drawable.test), ImageViewState(1f, PointF(0f, 0f), 0))
+
     }
 
     override fun initListener() {
