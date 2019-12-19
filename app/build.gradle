@@ -1,6 +1,9 @@
 apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.alibaba.arouter'
+apply plugin: 'kotlin-kapt'
+
 
 android {
     compileSdkVersion 28
@@ -11,7 +14,10 @@ android {
         versionCode rootProject.ext.android["versionCode"]
         versionName rootProject.ext.android["versionName"]
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        multiDexEnabled true    }
+        multiDexEnabled true
+
+
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -21,6 +27,12 @@ android {
     dataBinding {
         enabled = true
     }
+    kapt {
+        arguments {
+            arg("AROUTER_MODULE_NAME", project.getName())
+        }
+    }
+
 }
 
 dependencies {
@@ -37,10 +49,16 @@ dependencies {
     api 'com.gyf.immersionbar:immersionbar:2.3.1'
     implementation 'com.bigkoo:convenientbanner:2.0.5'
     implementation project(':core')
+    if (!isModule.toBoolean()) {
+        implementation project(':testmodule')
+    }
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "com.github.mancj:SlideUp-Android:2.2.8"
     implementation 'com.davemorrissey.labs:subsampling-scale-image-view:3.10.0'
 
+
+    implementation rootProject.ext.dependencies["alrouter"]
+    kapt rootProject.ext.dependencies["alrouter_compiler"]
 
 
 }

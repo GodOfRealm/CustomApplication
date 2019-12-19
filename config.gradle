@@ -107,6 +107,11 @@ ext {
             "meituan-channel"          : "com.meituan.android.walle:library:1.1.6",
 
             //adapter
-            "base-quick-adapter"       : "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.40"
+            "base-quick-adapter"       : "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.40",
+
+            "alrouter"                 : "com.alibaba:arouter-api:1.4.1",
+
+            "alrouter_compiler"        : "com.alibaba:arouter-compiler:1.2.1"
+
     ]
 }

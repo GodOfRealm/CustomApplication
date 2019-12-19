@@ -55,148 +55,6 @@
     <color name="transparent_white_70">#B4FFFFFF</color>
     <color name="transparent_white_80">#CBffffff</color>
     <color name="white">#ffffffff</color>
-    <declare-styleable name="AdvancedPagerSlidingTabStrip">
-        <attr format="color" name="apTabIndicatorColor"/>
-        <attr format="color" name="apTabUnderlineColor"/>
-        <attr format="color" name="apTabDividerColor"/>
-        <attr format="color" name="apTabTextSelectColor"/>
-        <attr format="dimension" name="apTabDrawPadding"/>
-        <attr format="dimension" name="apTabIndicatorHeight"/>
-        <attr format="dimension" name="apTabUnderlineHeight"/>
-        <attr format="dimension" name="apTabDividerPadding"/>
-        <attr format="dimension" name="apTabDividerHeight"/>
-        <attr format="dimension" name="apTabPaddingLeftRight"/>
-        <attr format="dimension" name="apTabPaddingTopBottom"/>
-        <attr format="dimension" name="apTabScrollOffset"/>
-        <attr format="reference" name="apTabBackground"/>
-        <attr format="boolean" name="apTabShouldExpand"/>
-        <attr format="boolean" name="apTabTextAllCaps"/>
-        <attr format="dimension" name="apTabUnderlineMargin"/>
-        <attr format="dimension" name="apTabIndicatorExpand"/>
-        <attr format="dimension" name="apTabIndicatorMargin"/>
-        <attr format="enum" name="apTabDrawMode">
-            <enum name="normal" value="0"/>
-            <enum name="text" value="1"/>
-        </attr>
-    </declare-styleable>
-    <declare-styleable name="RadiusConstraintLayout">
-        <attr name="rv_backgroundColor"/>
-        <attr name="rv_backgroundPressedColor"/>
-        <attr name="rv_backgroundEnabledColor"/>
-        <attr name="rv_radius"/>
-        <attr name="rv_strokeWidth"/>
-        <attr name="rv_strokeColor"/>
-        <attr name="rv_strokePressedColor"/>
-        <attr name="rv_strokeEnabledColor"/>
-        <attr name="rv_textColor"/>
-        <attr name="rv_textPressedColor"/>
-        <attr name="rv_textEnabledColor"/>
-        <attr name="rv_radiusHalfHeightEnable"/>
-        <attr name="rv_widthHeightEqualEnable"/>
-        <attr name="rv_topLeftRadius"/>
-        <attr name="rv_topRightRadius"/>
-        <attr name="rv_bottomLeftRadius"/>
-        <attr name="rv_bottomRightRadius"/>
-        <attr name="rv_rippleEnable"/>
-    </declare-styleable>
-    <declare-styleable name="RadiusFrameLayout">
-        <attr name="rv_backgroundColor"/>
-        <attr name="rv_backgroundPressedColor"/>
-        <attr name="rv_backgroundEnabledColor"/>
-        <attr name="rv_radius"/>
-        <attr name="rv_strokeWidth"/>
-        <attr name="rv_strokeColor"/>
-        <attr name="rv_strokePressedColor"/>
-        <attr name="rv_strokeEnabledColor"/>
-        <attr name="rv_textColor"/>
-        <attr name="rv_textPressedColor"/>
-        <attr name="rv_textEnabledColor"/>
-        <attr name="rv_radiusHalfHeightEnable"/>
-        <attr name="rv_widthHeightEqualEnable"/>
-        <attr name="rv_topLeftRadius"/>
-        <attr name="rv_topRightRadius"/>
-        <attr name="rv_bottomLeftRadius"/>
-        <attr name="rv_bottomRightRadius"/>
-        <attr name="rv_rippleEnable"/>
-    </declare-styleable>
-    <declare-styleable name="RadiusImageView">
-        <attr format="dimension" name="rv_corner_radius"/>
-        <attr format="dimension" name="rv_corner_radius_top_left"/>
-        <attr format="dimension" name="rv_corner_radius_top_right"/>
-        <attr format="dimension" name="rv_corner_radius_bottom_left"/>
-        <attr format="dimension" name="rv_corner_radius_bottom_right"/>
-        <attr format="dimension" name="rv_border_width"/>
-        <attr format="color" name="rv_border_color"/>
-        <attr format="boolean" name="rv_mutate_background"/>
-        <attr format="boolean" name="rv_oval"/>
-        <attr name="android:scaleType"/>
-        <attr name="rv_tile_mode">
-            <enum name="clamp" value="0"/>
-            <enum name="repeat" value="1"/>
-            <enum name="mirror" value="2"/>
-        </attr>
-        <attr name="rv_tile_mode_x">
-            <enum name="clamp" value="0"/>
-            <enum name="repeat" value="1"/>
-            <enum name="mirror" value="2"/>
-        </attr>
-        <attr name="rv_tile_mode_y">
-            <enum name="clamp" value="0"/>
-            <enum name="repeat" value="1"/>
-            <enum name="mirror" value="2"/>
-        </attr>
-    </declare-styleable>
-    <declare-styleable name="RadiusRelativeLayout">
-        <attr name="rv_backgroundColor"/>
-        <attr name="rv_backgroundPressedColor"/>
-        <attr name="rv_backgroundEnabledColor"/>
-        <attr name="rv_radius"/>
-        <attr name="rv_strokeWidth"/>
-        <attr name="rv_strokeColor"/>
-        <attr name="rv_strokePressedColor"/>
-        <attr name="rv_strokeEnabledColor"/>
-        <attr name="rv_textColor"/>
-        <attr name="rv_textPressedColor"/>
-        <attr name="rv_textEnabledColor"/>
-        <attr name="rv_radiusHalfHeightEnable"/>
-        <attr name="rv_widthHeightEqualEnable"/>
-        <attr name="rv_topLeftRadius"/>
-        <attr name="rv_topRightRadius"/>
-        <attr name="rv_bottomLeftRadius"/>
-        <attr name="rv_bottomRightRadius"/>
-        <attr name="rv_rippleEnable"/>
-    </declare-styleable>
-    <declare-styleable name="RadiusTextView">
-        <attr name="rv_backgroundColor"/>
-        <attr name="rv_backgroundPressedColor"/>
-        <attr name="rv_backgroundEnabledColor"/>
-        <attr name="rv_backgroundActivatedColor"/>
-        <attr name="rv_radius"/>
-        <attr name="rv_strokeWidth"/>
-        <attr name="rv_strokeColor"/>
-        <attr name="rv_strokePressedColor"/>
-        <attr name="rv_strokeEnabledColor"/>
-        <attr name="rv_strokeActivatedColor"/>
-        <attr name="rv_textColor"/>
-        <attr name="rv_textPressedColor"/>
-        <attr name="rv_textEnabledColor"/>
-        <attr name="rv_textActivatedColor"/>
-        <attr name="rv_radiusHalfHeightEnable"/>
-        <attr name="rv_widthHeightEqualEnable"/>
-        <attr name="rv_topLeftRadius"/>
-        <attr name="rv_topRightRadius"/>
-        <attr name="rv_bottomLeftRadius"/>
-        <attr name="rv_bottomRightRadius"/>
-        <attr name="rv_rippleEnable"/>
-    </declare-styleable>
-    <declare-styleable name="RatioImageView">
-        <attr format="float" name="ratio"/>
-        <attr format="enum" name="ratio_mode">
-            <enum name="autoFit" value="0"/>
-            <enum name="fitWidth" value="1"/>
-            <enum name="fitHeight" value="2"/>
-        </attr>
-    </declare-styleable>
     <dimen name="bdp_0_5">0.5dp</dimen>
     <dimen name="bdp_1">1dp</dimen>
     <dimen name="bdp_10">10dp</dimen>
@@ -426,4 +284,146 @@
         <item name="android:ellipsize">end</item>
         <item name="android:maxLength">12</item>
     </style>
+    <declare-styleable name="AdvancedPagerSlidingTabStrip">
+        <attr format="color" name="apTabIndicatorColor"/>
+        <attr format="color" name="apTabUnderlineColor"/>
+        <attr format="color" name="apTabDividerColor"/>
+        <attr format="color" name="apTabTextSelectColor"/>
+        <attr format="dimension" name="apTabDrawPadding"/>
+        <attr format="dimension" name="apTabIndicatorHeight"/>
+        <attr format="dimension" name="apTabUnderlineHeight"/>
+        <attr format="dimension" name="apTabDividerPadding"/>
+        <attr format="dimension" name="apTabDividerHeight"/>
+        <attr format="dimension" name="apTabPaddingLeftRight"/>
+        <attr format="dimension" name="apTabPaddingTopBottom"/>
+        <attr format="dimension" name="apTabScrollOffset"/>
+        <attr format="reference" name="apTabBackground"/>
+        <attr format="boolean" name="apTabShouldExpand"/>
+        <attr format="boolean" name="apTabTextAllCaps"/>
+        <attr format="dimension" name="apTabUnderlineMargin"/>
+        <attr format="dimension" name="apTabIndicatorExpand"/>
+        <attr format="dimension" name="apTabIndicatorMargin"/>
+        <attr format="enum" name="apTabDrawMode">
+            <enum name="normal" value="0"/>
+            <enum name="text" value="1"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="RadiusConstraintLayout">
+        <attr name="rv_backgroundColor"/>
+        <attr name="rv_backgroundPressedColor"/>
+        <attr name="rv_backgroundEnabledColor"/>
+        <attr name="rv_radius"/>
+        <attr name="rv_strokeWidth"/>
+        <attr name="rv_strokeColor"/>
+        <attr name="rv_strokePressedColor"/>
+        <attr name="rv_strokeEnabledColor"/>
+        <attr name="rv_textColor"/>
+        <attr name="rv_textPressedColor"/>
+        <attr name="rv_textEnabledColor"/>
+        <attr name="rv_radiusHalfHeightEnable"/>
+        <attr name="rv_widthHeightEqualEnable"/>
+        <attr name="rv_topLeftRadius"/>
+        <attr name="rv_topRightRadius"/>
+        <attr name="rv_bottomLeftRadius"/>
+        <attr name="rv_bottomRightRadius"/>
+        <attr name="rv_rippleEnable"/>
+    </declare-styleable>
+    <declare-styleable name="RadiusFrameLayout">
+        <attr name="rv_backgroundColor"/>
+        <attr name="rv_backgroundPressedColor"/>
+        <attr name="rv_backgroundEnabledColor"/>
+        <attr name="rv_radius"/>
+        <attr name="rv_strokeWidth"/>
+        <attr name="rv_strokeColor"/>
+        <attr name="rv_strokePressedColor"/>
+        <attr name="rv_strokeEnabledColor"/>
+        <attr name="rv_textColor"/>
+        <attr name="rv_textPressedColor"/>
+        <attr name="rv_textEnabledColor"/>
+        <attr name="rv_radiusHalfHeightEnable"/>
+        <attr name="rv_widthHeightEqualEnable"/>
+        <attr name="rv_topLeftRadius"/>
+        <attr name="rv_topRightRadius"/>
+        <attr name="rv_bottomLeftRadius"/>
+        <attr name="rv_bottomRightRadius"/>
+        <attr name="rv_rippleEnable"/>
+    </declare-styleable>
+    <declare-styleable name="RadiusImageView">
+        <attr format="dimension" name="rv_corner_radius"/>
+        <attr format="dimension" name="rv_corner_radius_top_left"/>
+        <attr format="dimension" name="rv_corner_radius_top_right"/>
+        <attr format="dimension" name="rv_corner_radius_bottom_left"/>
+        <attr format="dimension" name="rv_corner_radius_bottom_right"/>
+        <attr format="dimension" name="rv_border_width"/>
+        <attr format="color" name="rv_border_color"/>
+        <attr format="boolean" name="rv_mutate_background"/>
+        <attr format="boolean" name="rv_oval"/>
+        <attr name="android:scaleType"/>
+        <attr name="rv_tile_mode">
+            <enum name="clamp" value="0"/>
+            <enum name="repeat" value="1"/>
+            <enum name="mirror" value="2"/>
+        </attr>
+        <attr name="rv_tile_mode_x">
+            <enum name="clamp" value="0"/>
+            <enum name="repeat" value="1"/>
+            <enum name="mirror" value="2"/>
+        </attr>
+        <attr name="rv_tile_mode_y">
+            <enum name="clamp" value="0"/>
+            <enum name="repeat" value="1"/>
+            <enum name="mirror" value="2"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="RadiusRelativeLayout">
+        <attr name="rv_backgroundColor"/>
+        <attr name="rv_backgroundPressedColor"/>
+        <attr name="rv_backgroundEnabledColor"/>
+        <attr name="rv_radius"/>
+        <attr name="rv_strokeWidth"/>
+        <attr name="rv_strokeColor"/>
+        <attr name="rv_strokePressedColor"/>
+        <attr name="rv_strokeEnabledColor"/>
+        <attr name="rv_textColor"/>
+        <attr name="rv_textPressedColor"/>
+        <attr name="rv_textEnabledColor"/>
+        <attr name="rv_radiusHalfHeightEnable"/>
+        <attr name="rv_widthHeightEqualEnable"/>
+        <attr name="rv_topLeftRadius"/>
+        <attr name="rv_topRightRadius"/>
+        <attr name="rv_bottomLeftRadius"/>
+        <attr name="rv_bottomRightRadius"/>
+        <attr name="rv_rippleEnable"/>
+    </declare-styleable>
+    <declare-styleable name="RadiusTextView">
+        <attr name="rv_backgroundColor"/>
+        <attr name="rv_backgroundPressedColor"/>
+        <attr name="rv_backgroundEnabledColor"/>
+        <attr name="rv_backgroundActivatedColor"/>
+        <attr name="rv_radius"/>
+        <attr name="rv_strokeWidth"/>
+        <attr name="rv_strokeColor"/>
+        <attr name="rv_strokePressedColor"/>
+        <attr name="rv_strokeEnabledColor"/>
+        <attr name="rv_strokeActivatedColor"/>
+        <attr name="rv_textColor"/>
+        <attr name="rv_textPressedColor"/>
+        <attr name="rv_textEnabledColor"/>
+        <attr name="rv_textActivatedColor"/>
+        <attr name="rv_radiusHalfHeightEnable"/>
+        <attr name="rv_widthHeightEqualEnable"/>
+        <attr name="rv_topLeftRadius"/>
+        <attr name="rv_topRightRadius"/>
+        <attr name="rv_bottomLeftRadius"/>
+        <attr name="rv_bottomRightRadius"/>
+        <attr name="rv_rippleEnable"/>
+    </declare-styleable>
+    <declare-styleable name="RatioImageView">
+        <attr format="float" name="ratio"/>
+        <attr format="enum" name="ratio_mode">
+            <enum name="autoFit" value="0"/>
+            <enum name="fitWidth" value="1"/>
+            <enum name="fitHeight" value="2"/>
+        </attr>
+    </declare-styleable>
 </resources>

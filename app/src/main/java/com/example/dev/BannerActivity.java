@@ -5,6 +5,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
 import com.bigkoo.convenientbanner.holder.Holder;
@@ -23,6 +24,7 @@ import java.util.concurrent.LinkedBlockingQueue;
  * Company: @有门网络科技
  * Update Comments:
  */
+@Route(path = "/test/banner")
 public class BannerActivity extends BaseActivity {
 
     private ConvenientBanner mBanner;

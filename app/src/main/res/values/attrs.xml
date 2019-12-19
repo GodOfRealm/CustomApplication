@@ -23,16 +23,6 @@
         <attr name="donut_inner_drawable" format="reference" />
     </declare-styleable>
 
-    <!-- 多行textview尾部添加icon-->
-    <declare-styleable name="EndWithIconView">
-        <attr name="content_text_size" format="dimension" />
-        <attr name="content_text_color" format="color" />
-        <attr name="content_text_max_lines" format="integer" />
-        <attr name="content_text_line_space" format="dimension" />
-        <attr name="icon_width" format="dimension" />
-        <attr name="icon_height" format="dimension" />
-        <attr name="icon_padding" format="dimension" />
-        <attr name="content_text_bold" format="boolean" />
-    </declare-styleable>
+
 
 </resources>

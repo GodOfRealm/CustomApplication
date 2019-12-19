@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
@@ -20,7 +19,6 @@ import com.yanzhenjie.recyclerview.SwipeRecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-import static android.view.ViewGroup.*;
 import static android.view.ViewGroup.LayoutParams.*;
 
 public class MainActivity extends AppCompatActivity {
