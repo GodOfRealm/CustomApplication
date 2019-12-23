@@ -111,7 +111,10 @@ ext {
 
             "alrouter"                 : "com.alibaba:arouter-api:1.4.1",
 
-            "alrouter_compiler"        : "com.alibaba:arouter-compiler:1.2.1"
+            "alrouter_compiler"        : "com.alibaba:arouter-compiler:1.2.1",
+
+            "smartRefreshLayout"    : "com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-20",
+
 
     ]
 }

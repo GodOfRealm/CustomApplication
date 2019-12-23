@@ -23,6 +23,11 @@
         <attr name="donut_inner_drawable" format="reference" />
     </declare-styleable>
 
-
+    <declare-styleable name="CustomMaterialHeader">
+        <attr name="mhPrimaryColor" format="color" />
+        <attr name="mhShadowColor" format="color" />
+        <attr name="mhShadowRadius" format="dimension"/>
+        <attr name="mhShowBezierWave" format="boolean"/>
+    </declare-styleable>
 
 </resources>
