@@ -1,25 +1,25 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/dev/Downloads/android_project/MyApplication/core/src/main/AndroidManifest.xml:1:1-2:37
-INJECTED from /Users/dev/Downloads/android_project/MyApplication/core/src/main/AndroidManifest.xml:1:1-2:37
-INJECTED from /Users/dev/Downloads/android_project/MyApplication/core/src/main/AndroidManifest.xml:1:1-2:37
+ADDED from E:\android_work_space\CustomApplication\core\src\main\AndroidManifest.xml:1:1-2:37
+INJECTED from E:\android_work_space\CustomApplication\core\src\main\AndroidManifest.xml:1:1-2:37
+INJECTED from E:\android_work_space\CustomApplication\core\src\main\AndroidManifest.xml:1:1-2:37
 	package
-		ADDED from /Users/dev/Downloads/android_project/MyApplication/core/src/main/AndroidManifest.xml:2:5-35
-		INJECTED from /Users/dev/Downloads/android_project/MyApplication/core/src/main/AndroidManifest.xml
-		INJECTED from /Users/dev/Downloads/android_project/MyApplication/core/src/main/AndroidManifest.xml
+		ADDED from E:\android_work_space\CustomApplication\core\src\main\AndroidManifest.xml:2:5-35
+		INJECTED from E:\android_work_space\CustomApplication\core\src\main\AndroidManifest.xml
+		INJECTED from E:\android_work_space\CustomApplication\core\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/dev/Downloads/android_project/MyApplication/core/src/main/AndroidManifest.xml:1:1-2:37
+		ADDED from E:\android_work_space\CustomApplication\core\src\main\AndroidManifest.xml:1:1-2:37
 uses-sdk
-INJECTED from /Users/dev/Downloads/android_project/MyApplication/core/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/dev/Downloads/android_project/MyApplication/core/src/main/AndroidManifest.xml
-INJECTED from /Users/dev/Downloads/android_project/MyApplication/core/src/main/AndroidManifest.xml
-INJECTED from /Users/dev/Downloads/android_project/MyApplication/core/src/main/AndroidManifest.xml
-INJECTED from /Users/dev/Downloads/android_project/MyApplication/core/src/main/AndroidManifest.xml
+INJECTED from E:\android_work_space\CustomApplication\core\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\android_work_space\CustomApplication\core\src\main\AndroidManifest.xml
+INJECTED from E:\android_work_space\CustomApplication\core\src\main\AndroidManifest.xml
+INJECTED from E:\android_work_space\CustomApplication\core\src\main\AndroidManifest.xml
+INJECTED from E:\android_work_space\CustomApplication\core\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /Users/dev/Downloads/android_project/MyApplication/core/src/main/AndroidManifest.xml
-		ADDED from /Users/dev/Downloads/android_project/MyApplication/core/src/main/AndroidManifest.xml
-		INJECTED from /Users/dev/Downloads/android_project/MyApplication/core/src/main/AndroidManifest.xml
+		INJECTED from E:\android_work_space\CustomApplication\core\src\main\AndroidManifest.xml
+		ADDED from E:\android_work_space\CustomApplication\core\src\main\AndroidManifest.xml
+		INJECTED from E:\android_work_space\CustomApplication\core\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/dev/Downloads/android_project/MyApplication/core/src/main/AndroidManifest.xml
-		ADDED from /Users/dev/Downloads/android_project/MyApplication/core/src/main/AndroidManifest.xml
-		INJECTED from /Users/dev/Downloads/android_project/MyApplication/core/src/main/AndroidManifest.xml
+		INJECTED from E:\android_work_space\CustomApplication\core\src\main\AndroidManifest.xml
+		ADDED from E:\android_work_space\CustomApplication\core\src\main\AndroidManifest.xml
+		INJECTED from E:\android_work_space\CustomApplication\core\src\main\AndroidManifest.xml

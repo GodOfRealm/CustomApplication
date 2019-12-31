@@ -44,7 +44,7 @@ dependencies {
     // 下拉刷新
     api "com.scwang.smartrefresh:SmartRefreshLayout:$smartRefresh"
     // 工具类集合
-    api 'com.blankj:utilcode:1.17.2'
+    implementation rootProject.ext.dependencies["utilcode"]
     // 任务栏j
     api 'com.gyf.immersionbar:immersionbar:2.3.1'
 

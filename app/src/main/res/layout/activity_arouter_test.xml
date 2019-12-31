@@ -16,4 +16,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/bdp_100"
         android:text="MODULE" />
+
+    <TextView
+        android:id="@+id/aroute_tv_base"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/bdp_100"
+        android:text="BASE" />
 </LinearLayout>

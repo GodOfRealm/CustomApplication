@@ -6,7 +6,7 @@ apply plugin: 'kotlin-kapt'
 
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
     defaultConfig {
         applicationId "com.example.dev.myapplication"
         minSdkVersion rootProject.ext.android["minSdkVersion"]
@@ -60,7 +60,8 @@ dependencies {
     implementation rootProject.ext.dependencies["alrouter"]
     kapt rootProject.ext.dependencies["alrouter_compiler"]
     implementation rootProject.ext.dependencies["smartRefreshLayout"]
-
+    // 工具类集合
+    implementation rootProject.ext.dependencies["utilcode"]
 
 }
 repositories {

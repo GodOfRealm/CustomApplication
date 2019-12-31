@@ -38,6 +38,9 @@ ext {
             "retrofit-adapter-rxjava2" : "com.squareup.retrofit2:adapter-rxjava2:${version["retrofit"]}",
             "okhttp3"                  : "com.squareup.okhttp3:okhttp:3.6.0",
             "okhttp-urlconnection"     : "com.squareup.okhttp:okhttp-urlconnection:2.0.0",
+            "retrofit2-rxjava2-adapter": "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0",
+            "logging-interceptor"      : "com.squareup.okhttp3:logging-interceptor:3.4.1",
+            "converter-scalar"         : "com.squareup.retrofit2:converter-scalars:${version["retrofit"]}",
             "glide"                    : "com.github.bumptech.glide:glide:4.7.1",
             "glide-transformations"    : "jp.wasabeef:glide-transformations:4.7.1",
             "picasso"                  : "com.squareup.picasso:picasso:2.5.2",
@@ -89,6 +92,7 @@ ext {
             "multidex"                 : "com.android.support:multidex:1.0.2",
             //软键盘辅助
             "keyboard-helper"          : "net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:2.0.1",
+            "utilcode"                 : "com.blankj:utilcode:1.26.0",
 
             // test
             "junit"                    : "junit:junit:4.12",
@@ -113,7 +117,7 @@ ext {
 
             "alrouter_compiler"        : "com.alibaba:arouter-compiler:1.2.1",
 
-            "smartRefreshLayout"    : "com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-20",
+            "smartRefreshLayout"       : "com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-20",
 
 
     ]

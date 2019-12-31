@@ -23,6 +23,10 @@ class ArouterTestActivity : BaseActivity() {
             ARouter.getInstance().build("/module/activity").navigation()
 
         }
+        aroute_tv_base.setOnClickListener {
+            ARouter.getInstance().build("/base/activity").navigation()
+        }
+
     }
 
 
