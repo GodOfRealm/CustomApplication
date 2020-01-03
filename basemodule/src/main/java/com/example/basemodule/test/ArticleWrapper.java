@@ -1,5 +1,7 @@
 package com.example.basemodule.test;
 
+import android.support.annotation.NonNull;
+
 import java.util.List;
 
 public class ArticleWrapper {
@@ -54,7 +56,7 @@ public class ArticleWrapper {
         public void setPublishTime(long publishTime) {
             this.publishTime = publishTime;
         }
-    }
 
+    }
 
 }

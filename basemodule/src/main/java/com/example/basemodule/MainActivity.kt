@@ -1,5 +1,6 @@
 package com.example.basemodule
 
+import android.graphics.Color
 import android.os.Bundle
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.example.basemodule.base.BaseActivity
@@ -40,6 +41,7 @@ class MainActivity : BaseActivity() {
                     })
         }
     }
+
     private fun getParameters(): Map<String, Any> {
         val map = HashMap<String, Any>()
         map["username"] = "110120"
