@@ -5,10 +5,13 @@ import android.view.View
 import android.widget.LinearLayout
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.example.basemodule.adapter.ViewHolder
+import com.example.basemodule.base.list.view.CustomClassicsFooter
+import com.example.basemodule.base.list.view.CustomClassicsHeader
 import com.example.basemodule.utils.CollectionUtil
 import com.example.basemodule.widget.EmptyView
 import com.example.testmodule.R
 import com.scwang.smartrefresh.layout.SmartRefreshLayout
+import com.scwang.smartrefresh.layout.api.RefreshHeader
 
 /**
  * ListActivity和ListFragment的列表相关操作的代理类
@@ -53,7 +56,14 @@ class RefreshEventDelegate<T>(refresh: IRefreshEvent<T>) {
         mAdapter = mMaster.generateAdapter()
         mRecyclerView.adapter = mAdapter
         mAdapter.setHeaderAndEmpty(true)
+        refreshLayout.setRefreshHeader(CustomClassicsHeader(mRootView.context))
+        refreshLayout.setRefreshFooter(CustomClassicsFooter(mRootView.context))
         setEmptyView()
+    }
+
+    //设置下拉刷新样式
+    fun setRefreHead(header: RefreshHeader) {
+        refreshLayout.setRefreshHeader(header)
     }
 
     fun onRefreshComplete(data: List<T>?, success: Boolean) {
@@ -90,8 +100,6 @@ class RefreshEventDelegate<T>(refresh: IRefreshEvent<T>) {
      * Desc: 设置空页面
      *
      *
-     * Author: 廖培坤
-     * Date: 2018-08-06
      */
     private fun setEmptyView() {
         if (mEmptyView == null) {
@@ -109,8 +117,6 @@ class RefreshEventDelegate<T>(refresh: IRefreshEvent<T>) {
      * Desc: 无网络显示页面
      *
      *
-     * Author: 廖培坤
-     * Date: 2018-08-06
      */
     private fun setNotNetworkView() {
         if (mNetworkView == null) {

@@ -18,11 +18,30 @@ abstract class BaseListActivity<T> : BaseActivity(), IBaseListView<T>, IRefreshE
     }
 
     override fun init(savedInstanceState: Bundle?) {
+        val autoLoad = beginBeforeRequest()
         refreshDelegate.init(window.decorView)
         mRecyclerView = refreshDelegate.getRecyclerView()
         mAdapter = refreshDelegate.getAdapter()
-        onRefresh()
+        if (autoLoad) {
+            // 开始自动加载第一页数据
+            onRefresh()
+        }
+        begin()
     }
+    /**
+     * Desc: 在请求列表数据前调用，可在这里设置一些参数后再请求数据
+     *
+     *
+     * Date: 2018-07-06
+     *
+     * @return true 自动请求列表数据，false 不请求列表数据，在需要的时候手动调用@{link #onRefresh()}
+     * 加载数据
+     */
+    override  fun beginBeforeRequest(): Boolean {
+        return true
+    }
+
+    abstract override fun begin()
 
     override fun onRefreshComplete(data: MutableList<T>?, success: Boolean) {
         refreshDelegate.onRefreshComplete(data, success)

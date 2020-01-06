@@ -7,6 +7,10 @@ import com.example.basemodule.base.list.BaseListActivity
 import com.example.basemodule.widget.EmptyView
 
 class maxListActivityTest : BaseListActivity<Any>() {
+    override fun begin() {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
     override fun setupEmptyView(emptyView: EmptyView?) {
         emptyView?.setEmptyText("asdasdasds")
     }

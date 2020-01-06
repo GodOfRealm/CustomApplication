@@ -1,8 +1,6 @@
 package com.example.basemodule.base.list;
 
 import android.support.annotation.Nullable;
-import android.view.ViewGroup;
-
 
 import java.util.List;
 
@@ -13,7 +11,19 @@ import java.util.List;
  * @param <T> the type parameter
  */
 public interface IBaseListView<T>  {
+    /**
+     * Desc: 在请求列表数据前调用，可在这里设置一些参数后再请求数据
+     * <p>
+     *
+     * @return true 自动请求列表数据，false 不请求列表数据，在需要的时候手动调用@{link #onRefresh()}
+     * 加载数据
+     */
+    boolean beginBeforeRequest();
 
+    /**
+     * 逻辑开始处
+     */
+    void begin();
     /**
      * Desc: 刷新完成更新列表数据
 

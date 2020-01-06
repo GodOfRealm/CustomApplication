@@ -11,6 +11,9 @@ import com.example.basemodule.test.RetrofitHelper
 import com.example.basemodule.widget.EmptyView
 
 class ListTestActivity : BaseListActivity<ArticleWrapper.Article>() {
+    override fun begin() {
+    }
+
     override fun fetchData(page: Int) {
         LogUtils.e("fuck--->" + page)
         RetrofitHelper.getApiService()

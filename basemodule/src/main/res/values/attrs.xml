@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="PickViewPager">
+        <attr name="viewPagerWidth" format="dimension" />
+        <attr name="viewPagerHeight" format="dimension" />
+        <attr name="showCategory" format="boolean" />
+    </declare-styleable>
+
+    <!-- emoticon start -->
+    <declare-styleable name="EmoticonStyle">
+        <attr name="emoticonGridViewStyle" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="Emoticon">
+        <attr name="emoticonSize" format="dimension" />
+        <attr name="emoticonAlignment" format="enum">
+            <enum name="bottom" value="0" />
+            <enum name="baseline" value="1" />
+        </attr>
+        <attr name="emoticonTextStart" format="integer" />
+        <attr name="emoticonTextLength" format="integer" />
+        <attr name="emoticonUseSystemDefault" format="boolean" />
+    </declare-styleable>
+    <!-- emoticon end -->
+
+    <declare-styleable name="TwoLevelHeader">
+        <attr name="srlMaxRage" format="float"/>
+        <attr name="srlFloorRage" format="float"/>
+        <attr name="srlRefreshRage" format="float"/>
+        <attr name="srlFloorDuration" format="integer"/>
+        <attr name="srlEnableTwoLevel" format="boolean"/>
+        <attr name="srlEnablePullToCloseTwoLevel" format="boolean"/>
+    </declare-styleable>
+
+    <!-- 带下划线的textview -->
+    <declare-styleable name="DividerTextView">
+        <attr name="dividerTextViewColor" format="color" />
+        <attr name="dividerHeight" format="dimension" />
+        <attr name="dividerMarginStart" format="dimension" />
+        <attr name="dividerMarginEnd" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="CustomMaterialHeader">
+        <attr name="mhPrimaryColor" format="color" />
+        <attr name="mhShadowColor" format="color" />
+        <attr name="mhShadowRadius" format="dimension"/>
+        <attr name="mhShowBezierWave" format="boolean"/>
+    </declare-styleable>
+
+
+</resources>

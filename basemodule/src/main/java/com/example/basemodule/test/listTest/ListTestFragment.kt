@@ -11,6 +11,13 @@ import com.example.basemodule.test.RetrofitHelper
 import com.example.basemodule.widget.EmptyView
 
 class ListTestFragment : BaseListFragment<ArticleWrapper.Article>() {
+    override fun begin() {
+        onRefresh()
+    }
+
+    override fun beginBeforeRequest(): Boolean {
+        return false
+    }
     override fun setupEmptyView(emptyView: EmptyView?) {
         emptyView?.setEmptyText("asdasdasds")
     }

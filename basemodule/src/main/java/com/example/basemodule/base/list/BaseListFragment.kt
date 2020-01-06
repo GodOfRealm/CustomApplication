@@ -6,22 +6,41 @@ import com.chad.library.adapter.base.BaseQuickAdapter
 import com.example.basemodule.adapter.ViewHolder
 import com.example.basemodule.base.BaseFragment
 
-abstract class BaseListFragment<T> :BaseFragment() , IBaseListView<T>, IRefreshEvent<T>{
+abstract class BaseListFragment<T> : BaseFragment(), IBaseListView<T>, IRefreshEvent<T> {
     private val refreshDelegate = RefreshEventDelegate(this)
 
     lateinit var mRecyclerView: RecyclerView
 
     lateinit var mAdapter: BaseQuickAdapter<T, ViewHolder>
     override fun getLayoutId(): Int {
-    return    refreshDelegate.getLayoutID()
+        return refreshDelegate.getLayoutID()
     }
 
     override fun init(savedInstanceState: Bundle?) {
         refreshDelegate.init(rootView)
+        val autoLoad = beginBeforeRequest()
         mRecyclerView = refreshDelegate.getRecyclerView()
         mAdapter = refreshDelegate.getAdapter()
-        onRefresh()
+        if (autoLoad) {
+            // 开始自动加载第一页数据
+            onRefresh()
+        }
+        begin()
     }
+
+    /**
+     * Desc: 在请求列表数据前调用，可在这里设置一些参数后再请求数据
+     *
+     *
+     *
+     * @return true 自动请求列表数据，false 不请求列表数据，在需要的时候手动调用@{link #onRefresh()}
+     * 加载数据
+     */
+    override fun beginBeforeRequest(): Boolean {
+        return true
+    }
+
+    abstract override fun begin()
     override fun onRefreshComplete(data: MutableList<T>?, success: Boolean) {
         refreshDelegate.onRefreshComplete(data, success)
     }
