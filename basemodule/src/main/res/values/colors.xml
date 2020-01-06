@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#ffffdd00</color><!-- 应用主色调 -->
+    <color name="colorPrimaryDark">#fdcf00</color><!-- 比较深的主色调，一般用做按钮点击 -->
+    <color name="colorAccent">#ff1b1b1b</color><!-- 强调色，一般是按钮、光标等的颜色-->
+    <color name="colorWindowBackground">#fff4f3f2</color><!-- 全局窗口背景色 -->
+    <color name="colorTextHint">#B3B3B3</color><!-- textColorHint的颜色 -->
+    <color name="colorTextPrimary">#333333</color><!-- 最黑的字体颜色 -->
+    <color name="colorTextTertiary">#999999</color><!-- 偏浅的字体色-->
+    <color name="colorTextSecondary">#bbbbbb</color><!-- 最浅的字体色-->
+    <color name="colorDisable">#ffeeeeee</color> <!-- 控件不可用状态色 -->
 
     <color name="divPrimary">#eeeeee</color>
 

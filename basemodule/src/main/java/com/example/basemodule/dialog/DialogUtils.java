@@ -2,7 +2,7 @@ package com.example.basemodule.dialog;
 
 import android.content.Context;
 
-import com.example.testmodule.R;
+import com.example.basemodule.R;
 
 
 /**

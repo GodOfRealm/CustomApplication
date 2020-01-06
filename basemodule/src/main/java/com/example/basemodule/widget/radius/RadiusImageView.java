@@ -19,7 +19,7 @@ import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
 import android.util.Log;
 
-import com.example.testmodule.R;
+import com.example.basemodule.R;
 
 
 @SuppressWarnings("UnusedDeclaration")

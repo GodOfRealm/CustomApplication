@@ -4,12 +4,12 @@ import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.widget.LinearLayout
 import com.chad.library.adapter.base.BaseQuickAdapter
+import com.example.basemodule.R
 import com.example.basemodule.adapter.ViewHolder
 import com.example.basemodule.base.list.view.CustomClassicsFooter
 import com.example.basemodule.base.list.view.CustomClassicsHeader
 import com.example.basemodule.utils.CollectionUtil
 import com.example.basemodule.widget.EmptyView
-import com.example.testmodule.R
 import com.scwang.smartrefresh.layout.SmartRefreshLayout
 import com.scwang.smartrefresh.layout.api.RefreshHeader
 

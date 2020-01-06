@@ -5,15 +5,16 @@ import android.support.constraint.ConstraintLayout
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
-import com.example.testmodule.R
-import kotlinx.android.synthetic.main.base_empty_view.view.*
+import com.example.basemodule.R
+import kotlinx.android.synthetic.main.base_custom_empty_view.view.*
 
 class EmptyView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout(context, attrs, defStyleAttr), BaseCustomView<String> {
     // 刷新回调
     var retryCallback: (() -> Unit)? = null
+    private lateinit var mView: View
 
     init {
-        LayoutInflater.from(context).inflate(R.layout.base_empty_view, this)
+        mView = LayoutInflater.from(context).inflate(R.layout.base_custom_empty_view, this)
         initView()
         initData()
         initListener()
@@ -26,7 +27,7 @@ class EmptyView @JvmOverloads constructor(context: Context, attrs: AttributeSet?
     }
 
     override fun initListener() {
-        base_tv_empty_retry.setOnClickListener {
+        mView.base_tv_empty_retry.setOnClickListener {
             retryCallback?.invoke()
         }
     }
@@ -39,7 +40,7 @@ class EmptyView @JvmOverloads constructor(context: Context, attrs: AttributeSet?
      * @param text empty text
      */
     fun setEmptyText(text: String): EmptyView {
-        base_tv_empty_des.text = text
+        mView. base_tv_empty_des.text = text
         return this
     }
 
@@ -49,7 +50,7 @@ class EmptyView @JvmOverloads constructor(context: Context, attrs: AttributeSet?
      * @param resource empty image
      */
     fun setEmptyImageResource(resource: Int): EmptyView {
-        base_iv_empty_icon.setImageResource(resource)
+        mView. base_iv_empty_icon.setImageResource(resource)
         return this
     }
 
@@ -58,8 +59,8 @@ class EmptyView @JvmOverloads constructor(context: Context, attrs: AttributeSet?
 
      */
     fun setRetryText(text: String): EmptyView {
-        base_tv_empty_retry.visibility = View.VISIBLE
-        base_tv_empty_retry.text = text
+        mView.  base_tv_empty_retry.visibility = View.VISIBLE
+        mView.base_tv_empty_retry.text = text
         return this
     }
 
@@ -68,7 +69,7 @@ class EmptyView @JvmOverloads constructor(context: Context, attrs: AttributeSet?
 
      */
     fun setRetryButtonVisibility(visibility: Int): EmptyView {
-        base_tv_empty_retry.visibility = visibility
+        mView. base_tv_empty_retry.visibility = visibility
         return this
     }
 

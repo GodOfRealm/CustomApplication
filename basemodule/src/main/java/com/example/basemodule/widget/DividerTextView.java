@@ -10,7 +10,7 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 
 import com.blankj.utilcode.util.SizeUtils;
-import com.example.testmodule.R;
+import com.example.basemodule.R;
 
 
 /**

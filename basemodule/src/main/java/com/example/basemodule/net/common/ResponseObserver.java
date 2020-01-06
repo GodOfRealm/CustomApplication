@@ -3,9 +3,10 @@ package com.example.basemodule.net.common;
 import android.widget.Toast;
 
 import com.blankj.utilcode.util.ToastUtils;
+import com.example.basemodule.R;
 import com.example.basemodule.net.exception.NoDataExceptionException;
 import com.example.basemodule.net.exception.ServerResponseException;
-import com.example.testmodule.R;
+
 import com.google.gson.JsonParseException;
 import com.jakewharton.retrofit2.adapter.rxjava2.HttpException;
 

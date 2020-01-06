@@ -1,6 +1,5 @@
 package com.example.basemodule
 
-import android.graphics.Color
 import android.os.Bundle
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.example.basemodule.base.BaseActivity
@@ -9,7 +8,6 @@ import com.example.basemodule.net.common.RxUtil
 import com.example.basemodule.test.ArticleWrapper
 import com.example.basemodule.test.LoginResponse
 import com.example.basemodule.test.RetrofitHelper
-import com.example.testmodule.R
 import kotlinx.android.synthetic.main.activity_base_main.*
 import java.util.HashMap
 

@@ -14,7 +14,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.testmodule.R;
+import com.example.basemodule.R;
 
 
 /**

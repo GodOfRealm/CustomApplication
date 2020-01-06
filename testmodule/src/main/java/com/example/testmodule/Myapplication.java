@@ -1,8 +1,6 @@
 package com.example.testmodule;
 
-import android.app.Application;
-
-import com.alibaba.android.arouter.launcher.ARouter;
+import com.example.basemodule.base.BaseApplication;
 
 /**
  * Desc:
@@ -11,10 +9,9 @@ import com.alibaba.android.arouter.launcher.ARouter;
  * Company: @有门网络科技
  * Update Comments:
  */
-public class Myapplication extends Application {
+public class Myapplication extends BaseApplication {
     @Override
     public void onCreate() {
         super.onCreate();
-        ARouter.init(this);
     }
 }

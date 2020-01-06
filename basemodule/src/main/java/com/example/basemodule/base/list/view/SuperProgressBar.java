@@ -6,7 +6,7 @@ import android.os.Build;
 import android.util.AttributeSet;
 import android.widget.ProgressBar;
 
-import com.example.testmodule.R;
+import com.example.basemodule.R;
 
 
 /**

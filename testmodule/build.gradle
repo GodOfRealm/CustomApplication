@@ -61,4 +61,9 @@ dependencies {
 
     implementation rootProject.ext.dependencies["alrouter"]
     kapt rootProject.ext.dependencies["alrouter_compiler"]
+//    if (!isModule.toBoolean()) {
+        api project(':basemodule')
+//    }
+
+
 }

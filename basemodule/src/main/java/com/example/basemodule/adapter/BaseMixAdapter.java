@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-import com.example.testmodule.R;
+import com.example.basemodule.R;
 
 import java.util.List;
 
