@@ -1,29 +1,27 @@
 if (isModule.toBoolean()) {
     apply plugin: 'com.android.application'  //组件开发模式，独立运行
 } else {
-    apply plugin: 'com.android.library'  //集成开发模式
+apply plugin: 'com.android.library'  //集成开发模式
 }
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'com.alibaba.arouter'
 apply plugin: 'kotlin-kapt'
-
 android {
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
 
 
+
     defaultConfig {
         if (isModule.toBoolean()) {
-            applicationId "com.example.testmodule"
+            applicationId "com.example.commonmodule"
         }
         minSdkVersion rootProject.ext.android["minSdkVersion"]
         targetSdkVersion rootProject.ext.android["targetSdkVersion"]
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
-
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -46,9 +44,12 @@ android {
             }
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 
 }
-
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -63,11 +64,10 @@ dependencies {
 
     implementation rootProject.ext.dependencies["alrouter"]
     kapt rootProject.ext.dependencies["alrouter_compiler"]
+    implementation rootProject.ext.dependencies["agentweb"]
+
 //    if (!isModule.toBoolean()) {
     api project(':basemodule')
-    api project(':commonmodule')
-
 //    }
-
 
 }

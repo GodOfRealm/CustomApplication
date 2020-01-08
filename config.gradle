@@ -59,6 +59,7 @@ ext {
             "banner"                   : "com.youth.banner:banner:1.4.10",
             "systembartint"            : "com.readystatesoftware.systembartint:systembartint:1.0.4",
             "greendao"                 : "org.greenrobot:greendao:${version["greendao"]}",
+            "agentweb"                 : "com.just.agentweb:agentweb:4.1.2",
 
             //rx1
             "rxandroid"                : "io.reactivex:rxandroid:1.2.1",
