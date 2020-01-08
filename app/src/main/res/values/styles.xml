@@ -1,7 +1,9 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="AppTheme.BaseModule"/>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+
+    </style>
 
     <style name="ToolBarTitleText" parent="TextAppearance.AppCompat.Medium">
         <item name="android:textColor">#ffffffff</item>

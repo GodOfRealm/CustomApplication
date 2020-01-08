@@ -14,13 +14,11 @@
         android:id="@+id/aroute_tv_module"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/common_search_layout_height"
         android:text="MODULE" />
 
     <TextView
         android:id="@+id/aroute_tv_base"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/common_search_layout_height"
         android:text="BASE" />
 </LinearLayout>
