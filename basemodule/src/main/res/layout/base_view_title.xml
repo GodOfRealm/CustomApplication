@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/base_cl_title_root"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize">
+
+    <ImageView
+        android:id="@+id/base_iv_title_left_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/base_ic_back_arrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/base_tv_title_left_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="backtitle"
+        app:layout_constraintBottom_toBottomOf="@id/base_iv_title_left_icon"
+        app:layout_constraintStart_toEndOf="@id/base_iv_title_left_icon"
+        app:layout_constraintTop_toTopOf="@id/base_iv_title_left_icon" />
+
+    <TextView
+        android:id="@+id/base_tv_title_center_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="centitletitle"
+        app:layout_constraintBottom_toBottomOf="@id/base_iv_title_left_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/base_iv_title_left_icon" />
+
+    <TextView
+        android:id="@+id/base_tv_title_right_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="menutitle"
+        app:layout_constraintBottom_toBottomOf="@id/base_iv_title_left_icon"
+        app:layout_constraintEnd_toStartOf="@id/base_iv_title_right_icon"
+        app:layout_constraintTop_toTopOf="@id/base_iv_title_left_icon" />
+
+    <ImageView
+        android:id="@+id/base_iv_title_right_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/base_ic_back_arrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

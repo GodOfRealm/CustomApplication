@@ -2,6 +2,7 @@ package com.example.basemodule.base.list
 
 import android.support.v7.widget.RecyclerView
 import android.view.View
+import android.view.ViewGroup
 import android.widget.LinearLayout
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.example.basemodule.R
@@ -170,7 +171,15 @@ class RefreshEventDelegate<T>(refresh: IRefreshEvent<T>) {
             mNetworkView!!.setVisibility(View.GONE)
         }
     }
+    /**
+     * Desc: 获取页面的跟布局
+     *
 
+     * @return view group
+     */
+    fun getPageRootView(): ViewGroup {
+        return mRecyclerView.parent.parent as ViewGroup
+    }
 
     /**
      * Desc: 获取当前页码

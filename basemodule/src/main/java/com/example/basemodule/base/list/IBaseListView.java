@@ -1,6 +1,7 @@
 package com.example.basemodule.base.list;
 
 import android.support.annotation.Nullable;
+import android.view.ViewGroup;
 
 import java.util.List;
 
@@ -64,6 +65,8 @@ public interface IBaseListView<T>  {
 
 
     int getCurPage();
+
+    ViewGroup getRootView();
 
     void setData(List<T> data, boolean success,int requestPage);
 

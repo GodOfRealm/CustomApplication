@@ -2,6 +2,7 @@ package com.example.basemodule.base.list
 
 import android.os.Bundle
 import android.support.v7.widget.RecyclerView
+import android.view.ViewGroup
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.example.basemodule.adapter.ViewHolder
 import com.example.basemodule.base.BaseFragment
@@ -65,6 +66,10 @@ abstract class BaseListFragment<T> : BaseFragment(), IBaseListView<T>, IRefreshE
 
     override fun getCurPage(): Int {
         return refreshDelegate.getCurPage()
+    }
+
+    override fun getRootView(): ViewGroup {
+        return refreshDelegate.getPageRootView()
     }
 
     override fun onRefresh() {

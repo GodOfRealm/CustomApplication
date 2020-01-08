@@ -1,6 +1,8 @@
 package com.example.testmodule
 
+import android.view.View
 import com.alibaba.android.arouter.facade.annotation.Route
+import com.blankj.utilcode.util.LogUtils
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.example.basemodule.adapter.BaseMixAdapter
 import com.example.basemodule.adapter.ViewHolder
@@ -9,9 +11,25 @@ import com.example.basemodule.test.listTest.FloatItemPresenter
 import com.example.basemodule.test.listTest.IntItemPresenter
 import com.example.basemodule.test.listTest.StringItemPresenter
 import com.example.basemodule.widget.EmptyView
+import com.example.basemodule.widget.title.SimpleTitleActionListener
+import com.example.basemodule.widget.title.TitleView
+
 @Route(path = "/max/activity")
 class AsDMaxActivity : BaseListActivity<Any>() {
     override fun begin() {
+//        var titleDelegate = TitleView(this)
+//        rootView.addView(titleDelegate, 0)
+//        titleDelegate.setAction(object : SimpleTitleActionListener() {
+//            override fun onLeftTitleAction(view: View) {
+//                LogUtils.e("fuckonLeftTitleAction")
+//            }
+//
+//            override fun onTitleAction(view: View) {
+//                LogUtils.e("fuckonTitleAction")
+//
+//            }
+//        })
+
     }
 
     override fun setupEmptyView(emptyView: EmptyView?) {

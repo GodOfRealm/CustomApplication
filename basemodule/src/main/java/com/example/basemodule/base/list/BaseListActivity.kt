@@ -2,6 +2,7 @@ package com.example.basemodule.base.list
 
 import android.os.Bundle
 import android.support.v7.widget.RecyclerView
+import android.view.ViewGroup
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.example.basemodule.adapter.ViewHolder
 import com.example.basemodule.base.BaseActivity
@@ -28,6 +29,7 @@ abstract class BaseListActivity<T> : BaseActivity(), IBaseListView<T>, IRefreshE
         }
         begin()
     }
+
     /**
      * Desc: 在请求列表数据前调用，可在这里设置一些参数后再请求数据
      *
@@ -37,7 +39,7 @@ abstract class BaseListActivity<T> : BaseActivity(), IBaseListView<T>, IRefreshE
      * @return true 自动请求列表数据，false 不请求列表数据，在需要的时候手动调用@{link #onRefresh()}
      * 加载数据
      */
-    override  fun beginBeforeRequest(): Boolean {
+    override fun beginBeforeRequest(): Boolean {
         return true
     }
 
@@ -69,6 +71,10 @@ abstract class BaseListActivity<T> : BaseActivity(), IBaseListView<T>, IRefreshE
         return refreshDelegate.getCurPage()
     }
 
+    override fun getRootView(): ViewGroup {
+        return refreshDelegate.getPageRootView()
+    }
+
     override fun onRefresh() {
         fetchData(PageIndicator.START)
     }
@@ -85,7 +91,6 @@ abstract class BaseListActivity<T> : BaseActivity(), IBaseListView<T>, IRefreshE
             onLoadMoreComplete(data, success)
         }
     }
-
 
 
 }
