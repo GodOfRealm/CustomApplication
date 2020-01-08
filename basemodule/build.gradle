@@ -53,14 +53,14 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation rootProject.ext.dependencies["constraint-layout"]
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    api rootProject.ext.dependencies["recyclerview"]
     implementation rootProject.ext.dependencies["appcompat-v7"]
+    implementation rootProject.ext.dependencies["constraint-layout"]
+    testImplementation rootProject.ext.dependencies["junit"]
+    testImplementation rootProject.ext.dependencies["runner"]
+    testImplementation rootProject.ext.dependencies["espresso-core"]
+    implementation rootProject.ext.dependencies["design"]
 
-
+    api rootProject.ext.dependencies["recyclerview"]
     implementation rootProject.ext.dependencies["alrouter"]
     kapt rootProject.ext.dependencies["alrouter_compiler"]
 
