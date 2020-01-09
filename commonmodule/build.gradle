@@ -1,8 +1,8 @@
-if (isModule.toBoolean()) {
-    apply plugin: 'com.android.application'  //组件开发模式，独立运行
-} else {
+//if (isModule.toBoolean()) {
+//    apply plugin: 'com.android.application'  //组件开发模式，独立运行
+//} else {
 apply plugin: 'com.android.library'  //集成开发模式
-}
+//}
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'com.alibaba.arouter'
@@ -13,9 +13,9 @@ android {
 
 
     defaultConfig {
-        if (isModule.toBoolean()) {
-            applicationId "com.example.commonmodule"
-        }
+//        if (isModule.toBoolean()) {
+//            applicationId "com.example.commonmodule"
+//        }
         minSdkVersion rootProject.ext.android["minSdkVersion"]
         targetSdkVersion rootProject.ext.android["targetSdkVersion"]
         versionCode 1
@@ -37,11 +37,11 @@ android {
     }
     sourceSets {
         main {
-            if (isModule.toBoolean()) {
-                manifest.srcFile 'src/main/module/AndroidManifest.xml'
-            } else {
+//            if (isModule.toBoolean()) {
+//                manifest.srcFile 'src/main/module/AndroidManifest.xml'
+//            } else {
                 manifest.srcFile 'src/main/AndroidManifest.xml'
-            }
+//            }
         }
     }
     compileOptions {

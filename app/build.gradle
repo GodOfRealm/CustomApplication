@@ -51,6 +51,8 @@ dependencies {
     implementation project(':core')
     if (!isModule.toBoolean()) {
         implementation project(':testmodule')
+    } else {
+        implementation project(':basemodule')
     }
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "com.github.mancj:SlideUp-Android:2.2.8"
