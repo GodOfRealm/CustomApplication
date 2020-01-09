@@ -1,6 +1,7 @@
 package com.example.basemodule.net.interceptor;
 
 import com.blankj.utilcode.util.LogUtils;
+import com.example.basemodule.BuildConfig;
 
 import java.io.IOException;
 
@@ -14,7 +15,7 @@ import okhttp3.ResponseBody;
  */
 
 public class LoggingInterceptor implements Interceptor {
-    boolean DEBUG = true;
+    boolean DEBUG = BuildConfig.LOG_DEBUG;
 
     @Override
     public Response intercept(Chain chain) throws IOException {
