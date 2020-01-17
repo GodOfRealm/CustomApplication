@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "E:\\android_work_space\\CustomApplication\\core\\build\\intermediates\\res\\merged\\release\\mipmap-xxhdpi-v4\\pic_delete_selector.png",
+        "source": "E:\\android_work_space\\CustomApplication\\core\\src\\main\\res\\mipmap-xxhdpi\\pic_delete_selector.png"
+    },
+    {
+        "merged": "E:\\android_work_space\\CustomApplication\\core\\build\\intermediates\\res\\merged\\release\\mipmap-xxhdpi-v4\\common_ic_back_arrow.png",
+        "source": "E:\\android_work_space\\CustomApplication\\core\\src\\main\\res\\mipmap-xxhdpi\\common_ic_back_arrow.png"
+    },
+    {
+        "merged": "E:\\android_work_space\\CustomApplication\\core\\build\\intermediates\\res\\merged\\release\\mipmap-xxhdpi-v4\\base_ic_edit_text_clear.png",
+        "source": "E:\\android_work_space\\CustomApplication\\core\\src\\main\\res\\mipmap-xxhdpi\\base_ic_edit_text_clear.png"
+    },
+    {
+        "merged": "E:\\android_work_space\\CustomApplication\\core\\build\\intermediates\\res\\merged\\release\\mipmap-xxhdpi-v4\\common_ic_def_avatar.png",
+        "source": "E:\\android_work_space\\CustomApplication\\core\\src\\main\\res\\mipmap-xxhdpi\\common_ic_def_avatar.png"
+    }
+]

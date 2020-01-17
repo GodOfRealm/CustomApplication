@@ -46,6 +46,15 @@
         <attr name="mhShadowRadius" format="dimension"/>
         <attr name="mhShowBezierWave" format="boolean"/>
     </declare-styleable>
-
+    <declare-styleable name="RadiusRealtimeBlurView">
+        <attr name="radius_realtimeBlurRadius" format="dimension" />
+        <attr name="radius_realtimeDownsampleFactor" format="float" />
+        <attr name="radius_realtimeOverlayColor" format="color" />
+        <attr name="radius_realtime_radius" format="dimension"/>
+        <attr name="radius_realtime_top_left" format="dimension"/>
+        <attr name="radius_realtime_top_right" format="dimension"/>
+        <attr name="radius_realtime_bottom_left" format="dimension"/>
+        <attr name="radius_realtime_bottom_right" format="dimension"/>
+    </declare-styleable>
 
 </resources>
